@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Pago Mixto (Lista)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="header_menu">
+            <a class="header_menu_link" href="index.html">Comun</a>
+            <a class="header_menu_link" href="parte-contado.html">Parte Contado</a>
+            <a class="header_menu_link" href="parte-lista.html">Parte Lista</a>
+        </nav>
+        <h2>Calculadora Pago Mixto (Lista)</h2>
+    </header>
+    <div class="contenedor">
+        <div class="contenido">
+                        <label for="precioLista">Precio de Lista: </label>
+            <input type="number" id="precioLista" step="0.01" placeholder="Ej: 762299.00">
+            <br>
+            <label for="parteLista">Parte a Lista: </label>
+            <input type="number" id="parteLista" step="0.01" placeholder="Ej: 325828.41">
+            <br>
+            <button onclick="calcularDesdeLista()">Calcular</button>
+            
+            <div class="resultados">
+                <div class="fila-resultado">
+                    <span class="etiqueta">TOTAL CONTADO:</span>
+                    <span id="totalContado" class="valor">$0.00</span>
+                </div>
+                <div class="fila-resultado">
+                    <span class="etiqueta">PARTE CONTADO:</span>
+                    <span id="parteContado" class="valor">$0.00</span>
+                </div>
+                <div class="fila-resultado destacado">
+                    <span class="etiqueta">DESCUENTO:</span>
+                    <span id="descuento" class="valor">0.0000%</span>
+                </div>
+                <div class="fila-resultado destacado">
+                    <span class="etiqueta">PRECIO FINAL:</span>
+                    <span id="precioFinal" class="valor">$0.00</span>
+                </div>
+            </div>
+            
+            <button onclick="copiarDescuento()">Copiar Descuento</button>
+        </div>
+        <img src="Centry.png" class="imagen-centry" alt="Logo Centry">
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
